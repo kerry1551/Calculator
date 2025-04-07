@@ -13,10 +13,22 @@ buttons.map((button) => {
                 break;
             case "=":
                 try {
-                    display.innerText = eval(display.innerText);
+                    const expression = display.innerText;
+
+                    if (/\/0(?!\d)/.test(expression)) {
+                        display.innerText = "0";
+                    } else {
+                        const result = eval(expression);
+                        if (result === Infinity || result === -Infinity || isNaN(result)) {
+                            display.innerText = "0";
+                        } else {
+                            display.innerText = result;
+                        }
+                    }
+
                     justEvaluated = true;
                 } catch (e) {
-                    display.innerText = "Error!";
+                    display.innerText = "0";
                 }
                 break;
             case "%":
