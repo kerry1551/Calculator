@@ -28,7 +28,7 @@ buttons.map((button) => {
 
                     justEvaluated = true;
                 } catch (e) {
-                    display.innerText = "На ноль делить нельзя";
+                    display.innerText = "0";
                 }
                 break;
             case "%":
