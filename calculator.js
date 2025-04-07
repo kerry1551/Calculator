@@ -28,11 +28,8 @@ buttons.map((button) => {
 
                     justEvaluated = true;
                 } catch (e) {
-<<<<<<< HEAD
                     display.innerText = "На ноль делить нельзя";
-=======
-                    display.innerText = "0";
->>>>>>> 6b25bcf44cb1391b70e0eb39684dc392648dcd5f
+
                 }
                 break;
             case "%":
