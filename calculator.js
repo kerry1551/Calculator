@@ -20,7 +20,7 @@ buttons.map((button) => {
                     } else {
                         const result = eval(expression);
                         if (result === Infinity || result === -Infinity || isNaN(result)) {
-                            display.innerText = "Не определено";
+                            display.innerText = "0";
                         } else {
                             display.innerText = result;
                         }
