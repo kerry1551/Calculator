@@ -16,11 +16,11 @@ buttons.map((button) => {
                     const expression = display.innerText;
 
                     if (/\/0(?!\d)/.test(expression)) {
-                        display.innerText = "0";
+                        display.innerText = "Не определено";
                     } else {
                         const result = eval(expression);
                         if (result === Infinity || result === -Infinity || isNaN(result)) {
-                            display.innerText = "0";
+                            display.innerText = "Не определено";
                         } else {
                             display.innerText = result;
                         }
@@ -28,7 +28,7 @@ buttons.map((button) => {
 
                     justEvaluated = true;
                 } catch (e) {
-                    display.innerText = "На ноль делить нельзя";
+                    display.innerText = "0";
 
                 }
                 break;
@@ -62,3 +62,4 @@ buttons.map((button) => {
         }
     });
 });
+
